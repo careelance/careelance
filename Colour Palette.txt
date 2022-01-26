@@ -1,0 +1,8 @@
+/* CSS HEX */
+--columbia-blue: #C3E2F7ff;
+--dark-pastel-green: #47BD5Cff;
+--space-cadet: #293B5Fff;
+--purple-navy: #47597Fff;
+--sage: #B2AC8Cff;
+--english-violet: #42354Fff;
+--white: #FFFFFFff;
