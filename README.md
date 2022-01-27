@@ -1,4 +1,6 @@
 ### Hi there 👋
+<h1>This is careelance</h1>
+<p>A website project for Computer Science course, CMT322.</p>
 
 <!--
 **careelance/careelance** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
