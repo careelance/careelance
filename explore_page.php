@@ -58,15 +58,15 @@
         <div class="col-12">
           <nav class="main-nav">
             <!-- ***** Logo Start ***** -->
-            <a href="main_page_guest.html" class="logo">
+            <a href="index.html" class="logo">
               <img src="cl.png" height="60px" width="180px" alt="">
             </a>
             <!-- ***** Logo End ***** -->
             <!-- ***** Menu Start ***** -->
             <ul class="nav">
-              <li class="scroll-to-section"><a href="main_page_guest.html" >Home</a></li>
+              <li class="scroll-to-section"><a href="index.html" >Home</a></li>
               <li class="scroll-to-section"><a href="#about">About</a></li>
-              <li class="scroll-to-section"><a href="explore_page.html" class="active">Explore</a></li>
+              <li class="scroll-to-section"><a href="explore_page.php" class="active">Explore</a></li>
               <li class="scroll-to-section"><div class="border-first-button"><a href="login_page.html">Log In</a></div></li> 
             </ul>        
             <a class='menu-trigger'>

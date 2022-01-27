@@ -8,12 +8,6 @@ $client = new MongoDB\Client(
 
 $db = $client->careelance;
 
-//$document = $db->findOne(['username' => 'muhamadaiman']);
-
-/*if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    echo "OK";
-}*/
-
 if(isset($_POST["login"])){
 
     //Retrieve username and password from form
@@ -38,7 +32,7 @@ if(isset($_POST["login"])){
     }
 
     if($email === $storedEmail && $pass === $storedPass){
-        //header("Location: main_page.html");
+
         $_SESSION['loggedUser'] = $storedFirstname;
         $_SESSION['logProof'] = TRUE;
         sleep(5);
@@ -47,7 +41,7 @@ if(isset($_POST["login"])){
     }else{
         $_SESSION['logProof'] = FALSE;
         sleep(5);
-        header("Location: main_page_user.php");
+        header("Location: index.html");
         exit();
     }
 
@@ -95,6 +89,4 @@ if(isset($_POST["login"])){
     }
 }
 
-    //echo nl2br("Username" . ' ' . $document["username"] . "\n");
-    //echo "Password" . ' ' . $document["password"];
 ?>
