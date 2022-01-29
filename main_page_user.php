@@ -85,7 +85,7 @@
             <ul class="nav">
               <li class="scroll-to-section"><a href="main_page_user.php" class="active">Home</a></li>
               <li class="scroll-to-section"><a href="#about">About</a></li>
-              <li class="scroll-to-section"><a href="explore_page.html">Explore</a></li>
+              <li class="scroll-to-section"><a href="explore_page.php">Explore</a></li>
               <!--<li class="scroll-to-section"><div class="border-first-button"><a href="login_page.html">Log In</a></div></li>-->
               <?php
                 

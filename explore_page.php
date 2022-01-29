@@ -67,11 +67,35 @@
               <li class="scroll-to-section"><a href="index.html" >Home</a></li>
               <li class="scroll-to-section"><a href="#about">About</a></li>
               <li class="scroll-to-section"><a href="explore_page.php" class="active">Explore</a></li>
-              <li class="scroll-to-section"><div class="border-first-button"><a href="login_page.html">Log In</a></div></li> 
-            </ul>        
-            <a class='menu-trigger'>
-                <span>Menu</span>
-            </a>
+              <?php
+                
+                if($_SESSION['logProof'] == TRUE){
+                  echo '
+                  <li class="scroll-to-section">
+                    
+                      <div class="dropdown">
+                      <button type="button" class="btn btn-primary dropdown-toggle mx-auto" 
+                      data-bs-toggle="dropdown" onclick="myFunction()"
+                      style="border: 1px solid #47597Fff !important;
+                      border-radius: 23px;">
+                    <span>'
+                    . $_SESSION['loggedUser'] .
+                    '</span>
+                      </button>
+                      <ul class="dropdown-menu" id="myDrop">
+                      <li><a class="dropdown-item" href="#">Link 1</a></li>
+                      <li><a class="dropdown-item" href="#">Link 2</a></li>
+                      <li><a class="dropdown-item" href="#">Link 3</a></li>
+                      <li><a class="dropdown-item" href="logout.php">Logout</a></li>
+                    </ul>
+                    </div>
+                  
+                  </li>';
+                } else{
+                  echo '<li class="scroll-to-section"><div class="border-first-button"><a href="login_page.html">Log In</a></div></li>';
+                }
+                ?> 
+            </ul>
             <!-- ***** Menu End ***** -->
           </nav>
         </div>
@@ -79,5 +103,63 @@
     </div>
   </header>
   <!-- ***** Header Area End ***** -->
+  <!-- ***** Search Bar Start *****-->
+  <section style="padding-top: 130px">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12">
+		  <div class="row search-page-top d-flex align-items-center justify-content-center">
+			<h1 class="text-black" style="text-align: center">Search Results</h1>	
+			  <form action="#" class="search-form-area">
+				<div class="row justify-content-center" style="padding-top: 20px">
+				  <div class="col-3 form-cols">
+					<input type="text" class="form-control" name="search" placeholder="Job Name">
+				  </div>
+				  <div class="col-3 form-cols">
+					<select class="form-select overflow-auto" style="width:100%">
+					  <option value="1">Select job type</option>
+            <option value="7">Any</option>
+					  <option value="2">Software Engineering</option>
+					  <option value="3">UI/UX Designer</option>
+					  <option value="4">Backend Developer</option>
+					  <option value="5">Research</option>
+					  <option value="6">Education</option>
+					</select>
+				  </div>
+				  <div class="col-1 form-cols">
+					<button type="submit" class="btn btn-info" name="search" style="background: #47BD5Cff">Search</button>
+				  </div>				
+				</div>
+		  </div>
+		</div>
+	  </div>
+	</div>
+  </section>
+  <!-- ***** Search Bar End *****-->
+  
+  <!-- ***** List Job Start *****-->
+  <section class="post-area section-gap" style="padding-top: 100px">
+	  <div class="container">
+			<div class="row justify-content-center d-flex row-cols-1 row-cols-md-2">
+        <div class="row ">
+          <div class="card mb-3" style="max-width: 1000px;">
+            <div class="row g-2">
+              <div class="col-md-4">
+                <img src="c_mini.png" class="rounded float-start" alt="...">
+              </div>
+              <div class="col-md-8">
+                <div class="card-body">
+                  <h5 class="card-title"><a href="#">UI/UX Designer</a></h5>
+                  <h6>Company Name</h6>
+                  <p class="card-text">We are searching for an eligible freelancer to work on our project.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- ***** List Job End *****-->
 </body>
 </html>
