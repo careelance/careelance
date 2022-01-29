@@ -11,7 +11,7 @@
   <meta name="author" content="">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=PT+Sans&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
   <link rel="shortcut icon" href="c_mini.png" type="image/png">
 
   <title>careelance - Explore</title>
@@ -39,7 +39,7 @@
 </head>
 <body>
     <!-- ***** Preloader Start ***** -->
-  <!--div id="js-preloader" class="js-preloader">
+  <div id="js-preloader" class="js-preloader">
     <div class="preloader-inner">
       <span class="dot"></span>
       <div class="dots">
@@ -48,7 +48,7 @@
         <span></span>
       </div>
     </div>
-  </div-->
+  </div>
   <!-- ***** Preloader End ***** -->
 
   <!-- ***** Header Area Start ***** -->
@@ -58,15 +58,15 @@
         <div class="col-12">
           <nav class="main-nav">
             <!-- ***** Logo Start ***** -->
-            <a href="index.html" class="logo">
+            <a href="main_page_guest.html" class="logo">
               <img src="cl.png" height="60px" width="180px" alt="">
             </a>
             <!-- ***** Logo End ***** -->
             <!-- ***** Menu Start ***** -->
             <ul class="nav">
-              <li class="scroll-to-section"><a href="index.html" >Home</a></li>
+              <li class="scroll-to-section"><a href="main_page_guest.html" >Home</a></li>
               <li class="scroll-to-section"><a href="#about">About</a></li>
-              <li class="scroll-to-section"><a href="explore_page.php" class="active">Explore</a></li>
+              <li class="scroll-to-section"><a href="explore_page.html" class="active">Explore</a></li>
               <?php
                 
                 if($_SESSION['logProof'] == TRUE){
@@ -95,7 +95,10 @@
                   echo '<li class="scroll-to-section"><div class="border-first-button"><a href="login_page.html">Log In</a></div></li>';
                 }
                 ?> 
-            </ul>
+            </ul>        
+            <a class='menu-trigger'>
+                <span>Menu</span>
+            </a>
             <!-- ***** Menu End ***** -->
           </nav>
         </div>
@@ -103,6 +106,7 @@
     </div>
   </header>
   <!-- ***** Header Area End ***** -->
+  
   <!-- ***** Search Bar Start *****-->
   <section style="padding-top: 130px">
     <div class="container">
