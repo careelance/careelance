@@ -25,6 +25,7 @@
   <link rel="stylesheet" href="assets/css/templatemo-digimedia-v3.css">
   <link rel="stylesheet" href="assets/css/animated.css">
   <link rel="stylesheet" href="assets/css/owl.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css">
     <!--<link href='https://fonts.googleapis.com/css2?family=PT+Sans&display=swap' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" href="./style.css">
     <style>body{background-color:#f0efeb}</style>-->
