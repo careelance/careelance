@@ -26,9 +26,6 @@
   <link rel="stylesheet" href="assets/css/animated.css">
   <link rel="stylesheet" href="assets/css/owl.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css">
-    <!--<link href='https://fonts.googleapis.com/css2?family=PT+Sans&display=swap' rel='stylesheet' type='text/css'>
-    <link rel="stylesheet" href="./style.css">
-    <style>body{background-color:#f0efeb}</style>-->
 
   <!-- Scripts -->
   <script src="vendor/jquery/jquery.min.js"></script>
@@ -37,6 +34,7 @@
   <script src="assets/js/animation.js"></script>
   <script src="assets/js/imagesloaded.js"></script>
   <script src="assets/js/custom.js"></script>
+  <script src="assets/js/dropDownUser.js"></script>
 </head>
 <body>
 
@@ -85,9 +83,6 @@
                 }
                 ?> 
             </ul>        
-            <a class='menu-trigger'>
-                <span>Menu</span>
-            </a>
             <!-- ***** Menu End ***** -->
           </nav>
         </div>

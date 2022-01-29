@@ -6,5 +6,5 @@ session_unset();
 
 // Set the session to false and redirect to main page
 $_SESSION['logProof'] = FALSE;
-header('Location: main_page_guest.html');
+header('Location: index.html');
 ?>

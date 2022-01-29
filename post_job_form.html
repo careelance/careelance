@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=PT+Sans&display=swap" rel="stylesheet">
+  <link rel="shortcut icon" href="c_mini.png" type="image/png">
+
+  <title>careelance - Post a New Job</title>
+
+  <!-- Bootstrap core CSS -->
+  <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+
+  <!-- Additional CSS Files -->
+  <link rel="stylesheet" href="assets/css/fontawesome.css">
+  <link rel="stylesheet" href="assets/css/templatemo-digimedia-v3.css">
+  <link rel="stylesheet" href="assets/css/animated.css">
+  <link rel="stylesheet" href="assets/css/owl.css">
+    <!--<link href='https://fonts.googleapis.com/css2?family=PT+Sans&display=swap' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="./style.css">
+    <style>body{background-color:#f0efeb}</style>-->
+
+  <!-- Scripts -->
+  <script src="vendor/jquery/jquery.min.js"></script>
+  <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/js/owl-carousel.js"></script>
+  <script src="assets/js/animation.js"></script>
+  <script src="assets/js/imagesloaded.js"></script>
+  <script src="assets/js/custom.js"></script>
+</head>
+<body>
+    
+    <!-- Post a Job Start -->
+    <section class="section bg-light">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-10">
+                    <div class="post-job bg-white p-4">
+                        <div class="custom-form">
+                            <div id="message3"></div>
+                            <form method="post" action="php/contact.php" name="contact-form" id="contact-form3">
+                                <h4 class="text-dark mb-4">Post A New Job</h4>
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <div class="form-group app-label mt-2">
+                                            <label for="company-name" class="text-muted">Job Title</label>
+                                            <input id="company-name" type="text" class="form-control resume" placeholder="">
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <div class="form-group app-label mt-2">
+                                            <label for="minimum-salary" class="text-muted">Minimum Salary</label>
+                                            <input id="minimum-salary" type="text" class="form-control resume" placeholder="$8000">
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="form-group app-label mt-2">
+                                            <label for="maximum-salary" class="text-muted">Maximum Salary</label>
+                                            <input id="maximum-salary" type="text" class="form-control resume" placeholder="$20000">
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <div class="form-group app-label mt-2">
+                                            <label for="level" class="text-muted">Education Level</label>
+                                            <div class="form-button">
+                                                <select class="nice-select">
+                                                    <option data-display="Level">Level</option>
+                                                    <option value="1">Diploma/A-Levels/Foundation</option>
+                                                    <option value="2">Bachelor's Degree</option>
+                                                    <option value="3">Master's Degree</option>
+                                                    <option value="4">PhD/Doctorate Degree</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <div class="form-group app-label mt-2">
+                                            <label for="url" class="text-muted">Website</label>
+                                            <input id="url" type="url" class="form-control resume" placeholder="">
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <div class="form-group app-label mt-2">
+                                            <label for="email-address" class="text-muted">Email Address</label>
+                                            <input id="email-address" type="text" class="form-control resume" placeholder="">
+                                        </div>
+                                    </div>
+
+                                    <div class="col-md-6">
+                                        <div class="form-group app-label mt-2">
+                                            <label for="number" class="text-muted">Phone Number</label>
+                                            <input id="number" type="text" class="form-control resume" placeholder="">
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <div class="form-group app-label mt-2">
+                                            <label for="description" class="text-muted">Job Description</label>
+                                            <textarea id="description" rows="6" class="form-control resume" placeholder=""></textarea>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <ul class="list-inline mb-0">
+                                            <li class="list-inline-item">
+                                                <div class="input-group mt-2 mb-2">
+                                                    <div class="custom-file">
+                                                        <input type="file" class="custom-file-input" id="inputGroupFile01" aria-describedby="inputGroupFileAddon01">
+                                                        <label class="custom-file-label" for="inputGroupFile01"><i class="mdi mdi-cloud-upload mr-1"></i> Upload Files</label>
+                                                    </div>
+                                                </div>
+                                            </li>
+
+                                            <li class="list-inline-item">
+                                                <h6 class="text-muted mb-0">Upload Images Or Documents.</h6>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+
+                                <div class="row">
+                                    <div class="col-lg-12">
+                                        <div class="text-center mt-4">
+                                            <a href="#" class="btn btn-custom btn-sm">Post a Job</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Post a Job End -->
+</body>
+</html>
