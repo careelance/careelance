@@ -37,13 +37,13 @@ if(isset($_POST["login"])){
         $_SESSION['userEm'] = $storedEmail;
         $_SESSION['typeofuser'] = $userType;
         $_SESSION['logProof'] = TRUE;
-        sleep(5);
-        header("Location: main_page_user.php");
+        sleep(2);
+        header("Location: index.php");
         exit();
     }else{
         echo '<script>alert("Your email or password is incorrect. Return to homepage.")</script>';
         $_SESSION['logProof'] = FALSE;
-        sleep(5);
+        sleep(2);
         header("Location: index.php");
         exit();
     }
@@ -84,7 +84,7 @@ if(isset($_POST["login"])){
     $_SESSION['logProof'] = TRUE;
     $_SESSION['loggedUser'] = $firstName;
     $_SESSION['typeofuser'] = $userType;
-    header("Location: main_page_user.php");
+    header("Location: index.php");
     exit();
 }
 

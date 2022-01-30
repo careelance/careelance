@@ -48,13 +48,13 @@
         <div class="col-12">
           <nav class="main-nav">
             <!-- ***** Logo Start ***** -->
-            <a href="main_page_user.php" class="logo">
+            <a href="index.php" class="logo">
               <img src="cl.png" height="60px" width="180px" alt="">
             </a>
             <!-- ***** Logo End ***** -->
             <!-- ***** Menu Start ***** -->
             <ul class="nav">
-              <li class="scroll-to-section"><a href="main_page_user.php" >Home</a></li>
+              <li class="scroll-to-section"><a href="index.php" >Home</a></li>
               <li class="scroll-to-section"><a href="#about">About</a></li>
               <li class="scroll-to-section"><a href="explore_page.php" class="active">Explore</a></li>
               <?php
