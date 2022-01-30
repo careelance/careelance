@@ -159,6 +159,7 @@
             <div class="row ">
   <?php 
     foreach($db->find() as $item){
+      echo $item->Description;
       echo '<div class="card mb-3" style="max-width: 1000px;">
                 <div class="row g-2">
                   <div class="col-md-4">
