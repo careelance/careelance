@@ -197,7 +197,7 @@
                                             </li>
 
                                             <li class="list-inline-item">
-                                                <h6 class="text-muted mb-0">Upload Images Or Documents.</h6>
+                                                <h6 class="text-muted mb-0">Upload Images</h6>
                                             </li>
                                         </ul>
                                     </div>
