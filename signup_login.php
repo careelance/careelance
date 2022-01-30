@@ -35,6 +35,7 @@ if(isset($_POST["login"])){
 
         $_SESSION['loggedUser'] = $storedFirstname;
         $_SESSION['userEm'] = $storedEmail;
+        $_SESSION['typeofuser'] = $userType;
         $_SESSION['logProof'] = TRUE;
         sleep(5);
         header("Location: main_page_user.php");
