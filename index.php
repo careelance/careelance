@@ -146,7 +146,7 @@
                   </div>
                   <div class="col-lg-12">
                     <div class="border-first-button scroll-to-section">
-                      <a href="explore_page.html">Search For Job</a>
+                      <a href="explore_page.php">Search For Job</a>
                     </div>
                   </div>
                 </div>
