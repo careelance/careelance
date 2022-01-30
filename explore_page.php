@@ -1,12 +1,5 @@
 <?php
   session_start();
-
-  require_once __DIR__ . '/vendor/autoload.php';
-
-  $client = new MongoDB\Client(
-    'mongodb+srv://group6:Group6@careelance.fyoln.mongodb.net/careelance?retryWrites=true&w=majority');
-
-  $db = $client->careelance->job;
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -158,7 +151,15 @@
           <div class="row justify-content-center d-flex row-cols-1 row-cols-md-2">
             <div class="row ">
   <?php 
+
+require_once __DIR__ . '/vendor/autoload.php';
+
+$client = new MongoDB\Client(
+  'mongodb+srv://group6:Group6@careelance.fyoln.mongodb.net/careelance?retryWrites=true&w=majority');
+
+$db = $client->careelance->job;
     foreach($db->find() as $item){
+      echo '<img src="data:jpeg;base64,' .base64_encode(implode("",$item['Picture'])). '" />';
       ?>
       <div class="card mb-3" style="max-width: 1000px;">
         <div class="row g-2">
