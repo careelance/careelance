@@ -44,7 +44,7 @@ if(isset($_POST["login"])){
         echo '<script>alert("Your email or password is incorrect. Return to homepage.")</script>';
         $_SESSION['logProof'] = FALSE;
         sleep(5);
-        header("Location: index.html");
+        header("Location: index.php");
         exit();
     }
 
