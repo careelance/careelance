@@ -38,6 +38,7 @@
   <script src="assets/js/imagesloaded.js"></script>
   <script src="assets/js/custom.js"></script>
   <script src="assets/js/dropDownUser.js"></script>
+  <style>body {background-color: #C3E2F7ff;}</style>
 </head>
 <body>
 
@@ -114,7 +115,7 @@
   </header>
   <!-- ***** Header Area End ***** -->
   
-  <!-- ***** Search Bar Start *****-->
+  <!-- ***** Search Bar Start *****>
   <section style="padding-top: 130px">
     <div class="container">
       <div class="row">
@@ -146,11 +147,12 @@
 	  </div>
 	</div>
   </section>
-  <!-- ***** Search Bar End *****-->
+  <***** Search Bar End *****-->
   
   <!-- ***** List Job Start *****-->
-  <section class="post-area section-gap" style="padding-top: 100px">
+  <section class="post-area section-gap" style="padding-top: 130px">
         <div class="container">
+			<h1 class="text-black" style="text-align: center">Job List</h1>
           <div class="row justify-content-center d-flex row-cols-1 row-cols-md-2">
             <div class="row ">
   <?php 
