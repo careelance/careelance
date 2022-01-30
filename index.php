@@ -166,7 +166,7 @@
     </div>
   </div>
 
-<!----  <div id="about" class="about section">
+  <div id="about" class="about section">
     <div class="container">
       <div class="row">
         <div class="col-lg-12">
@@ -248,7 +248,7 @@
     </div>
   </div>
 
-  <div id="services" class="services section">
+  <!--div id="services" class="services section">
     <div class="container">
       <div class="row">
         <div class="col-lg-12">
