@@ -159,22 +159,22 @@
             <div class="row ">
   <?php 
     foreach($db->find() as $item){
-      echo $item->Description;
-      echo '<div class="card mb-3" style="max-width: 1000px;">
-                <div class="row g-2">
-                  <div class="col-md-4">
-                    <img src="data:jpeg;base64,' .base64_encode(implode("",$item->Picture)). '" />
-                  </div>
-                 <div class="col-md-8">
-                   <div class="card-body">
-                      <h5 class="card-title"><a href="#">'.$item->JobTitle.'</a></h5>
-                      <h6>Salary: RM'.$item->MinimumSalary.' - '.$item->MaximumSalary.'</h6>
-                      <p class="card-text">'.$item->Description.'</p>
-                   </div>
-                 </div>
-                </div>';
-    }
-  ?>
+      ?>
+      <div class="card mb-3" style="max-width: 1000px;">
+        <div class="row g-2">
+          <div class="col-md-4">
+            <?php echo '<img src="data:jpeg;base64,' .base64_encode(implode("",$item->Picture)). '" />';?>
+          </div>
+          <div class="col-md-8">
+            <div class="card-body">
+              <h5 class="card-title"><a href="#">'.$item->JobTitle.'</a></h5>
+              <h6><?php echo 'Salary: RM'.$item->MinimumSalary.' - '.$item->MaximumSalary?></h6>
+              <p class="card-text"><?php $item->Description ?></p>
+            </div>
+          </div>
+        </div>
+    </div>
+<?php    }?>
             </div>
             </div>
           </div>
