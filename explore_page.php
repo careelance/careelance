@@ -7,6 +7,13 @@
     'mongodb+srv://group6:Group6@careelance.fyoln.mongodb.net/careelance?retryWrites=true&w=majority');
 
   $db = $client->careelance->job;
+  foreach($db->find() as $item){
+    $jobTitle = $item['JobTitle'];,
+    $minSalary = $item['MinimumSalary'];
+    $maxSalary = $item['MaximumSalary'];
+    $desc = $item['Description'];
+    $pict = $item['Picture'];
+  }
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -163,13 +170,13 @@
       <div class="card mb-3" style="max-width: 1000px;">
         <div class="row g-2">
           <div class="col-md-4">
-            <?php echo '<img src="data:jpeg;base64,' .base64_encode(implode("",$item->Picture)). '" />';?>
+            <?php echo '<img src="data:jpeg;base64,' .base64_encode(implode("",$item['Picture'])). '" />';?>
           </div>
           <div class="col-md-8">
             <div class="card-body">
-              <h5 class="card-title"><a href="#"><?php $item->JobTitle ?></a></h5>
-              <h6><?php echo 'Salary: RM'.$item->MinimumSalary.' - '.$item->MaximumSalary?></h6>
-              <p class="card-text"><?php $item->Description ?></p>
+              <h5 class="card-title"><a href="#"><?php $item['JobTitle'] ?></a></h5>
+              <h6><?php echo 'Salary: RM'.$item['MinimumSalary'].' - '.$item['MaximumSalary']?></h6>
+              <p class="card-text"><?php $item['Description'] ?></p>
             </div>
           </div>
         </div>
