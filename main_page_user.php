@@ -56,20 +56,6 @@
 </head>
 
 <body>
-
-  <!-- ***** Preloader Start ***** -->
-  <!--div id="js-preloader" class="js-preloader">
-    <div class="preloader-inner">
-      <span class="dot"></span>
-      <div class="dots">
-        <span></span>
-        <span></span>
-        <span></span>
-      </div>
-    </div>
-  </div-->
-  <!-- ***** Preloader End ***** -->
-
   <!-- ***** Header Area Start ***** -->
   <header class="header-area header-sticky wow slideInDown" data-wow-duration="0.75s" data-wow-delay="0s">
     <div class="container">
@@ -90,7 +76,8 @@
               <?php
                 
                 if($_SESSION['logProof'] == TRUE){
-                  echo '
+                  if($_SESSION['typeofuser'] == 'Client'){
+                    echo '
                   <li class="scroll-to-section">
                     
                       <div class="dropdown">
@@ -103,14 +90,34 @@
                     '</span>
                       </button>
                       <ul class="dropdown-menu" id="myDrop">
-                      <li><a class="dropdown-item" href="#">Link 1</a></li>
-                      <li><a class="dropdown-item" href="#">Link 2</a></li>
-                      <li><a class="dropdown-item" href="#">Link 3</a></li>
+                      <li><a class="dropdown-item" href="#">Profile</a></li>
+                      <li><a class="dropdown-item" href="post_job.php">Post a Job</a></li>
                       <li><a class="dropdown-item" href="logout.php">Logout</a></li>
                     </ul>
                     </div>
                   
                   </li>';
+                  } else if($_SESSION['typeofuser'] == 'Freelancer'){
+                    echo '
+                  <li class="scroll-to-section">
+                    
+                      <div class="dropdown">
+                      <button type="button" class="btn btn-primary dropdown-toggle mx-auto" 
+                      data-bs-toggle="dropdown" onclick="myFunction()"
+                      style="border: 1px solid #47597Fff !important;
+                      border-radius: 23px;">
+                    <span>'
+                    . $_SESSION['loggedUser'] .
+                    '</span>
+                      </button>
+                      <ul class="dropdown-menu" id="myDrop">
+                      <li><a class="dropdown-item" href="#">Profile</a></li>
+                      <li><a class="dropdown-item" href="logout.php">Logout</a></li>
+                    </ul>
+                    </div>
+                  
+                  </li>';
+                  }
                 } else{
                   echo '<li class="scroll-to-section"><div class="border-first-button"><a href="login_page.html">Log In</a></div></li>';
                 }

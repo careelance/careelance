@@ -34,13 +34,14 @@ if(isset($_POST["login"])){
     if($email === $storedEmail && $pass === $storedPass){
 
         $_SESSION['loggedUser'] = $storedFirstname;
+        $_SESSION['userEm'] = $storedEmail;
         $_SESSION['logProof'] = TRUE;
         sleep(5);
         header("Location: main_page_user.php");
         exit();
     }else{
-        $_SESSION['logProof'] = FALSE;
         echo '<script>alert("Your email or password is incorrect. Return to homepage.")</script>';
+        $_SESSION['logProof'] = FALSE;
         sleep(5);
         header("Location: index.html");
         exit();
@@ -67,11 +68,6 @@ if(isset($_POST["login"])){
             'userType' => $userType,
         ]);
 
-        $_SESSION['loggedUser'] = $firstName;
-        $_SESSION['logProof'] = TRUE;
-        sleep(5);
-        header("Location: main_page_user.php");
-        exit();
     } else if($userType == "Freelancer"){
         $setClient = $db->freelancer;
         
@@ -82,12 +78,13 @@ if(isset($_POST["login"])){
             'password' => $password,
             'userType' => $userType,
         ]);
-
-        $_SESSION['logProof'] = TRUE;
-        $_SESSION['loggedUser'] = $firstName;
-        header("Location: main_page_user.php");
-        exit();
     }
+
+    $_SESSION['logProof'] = TRUE;
+    $_SESSION['loggedUser'] = $firstName;
+    $_SESSION['typeofuser'] = $userType;
+    header("Location: main_page_user.php");
+    exit();
 }
 
 ?>

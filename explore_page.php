@@ -1,5 +1,12 @@
 <?php
   session_start();
+
+  require_once __DIR__ . '/vendor/autoload.php';
+
+  $client = new MongoDB\Client(
+    'mongodb+srv://group6:Group6@careelance.fyoln.mongodb.net/careelance?retryWrites=true&w=majority');
+
+  $db = $client->careelance->job;
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -55,9 +62,9 @@
               <li class="scroll-to-section"><a href="#about">About</a></li>
               <li class="scroll-to-section"><a href="explore_page.html" class="active">Explore</a></li>
               <?php
-                
                 if($_SESSION['logProof'] == TRUE){
-                  echo '
+                  if($_SESSION['typeofuser'] == 'Client'){
+                    echo '
                   <li class="scroll-to-section">
                     
                       <div class="dropdown">
@@ -70,14 +77,34 @@
                     '</span>
                       </button>
                       <ul class="dropdown-menu" id="myDrop">
-                      <li><a class="dropdown-item" href="#">Link 1</a></li>
-                      <li><a class="dropdown-item" href="#">Link 2</a></li>
-                      <li><a class="dropdown-item" href="#">Link 3</a></li>
+                      <li><a class="dropdown-item" href="#">Profile</a></li>
+                      <li><a class="dropdown-item" href="post_job.php">Post a Job</a></li>
                       <li><a class="dropdown-item" href="logout.php">Logout</a></li>
                     </ul>
                     </div>
                   
                   </li>';
+                  } else if($_SESSION['typeofuser'] == 'Freelancer'){
+                    echo '
+                  <li class="scroll-to-section">
+                    
+                      <div class="dropdown">
+                      <button type="button" class="btn btn-primary dropdown-toggle mx-auto" 
+                      data-bs-toggle="dropdown" onclick="myFunction()"
+                      style="border: 1px solid #47597Fff !important;
+                      border-radius: 23px;">
+                    <span>'
+                    . $_SESSION['loggedUser'] .
+                    '</span>
+                      </button>
+                      <ul class="dropdown-menu" id="myDrop">
+                      <li><a class="dropdown-item" href="#">Profile</a></li>
+                      <li><a class="dropdown-item" href="logout.php">Logout</a></li>
+                    </ul>
+                    </div>
+                  
+                  </li>';
+                  }
                 } else{
                   echo '<li class="scroll-to-section"><div class="border-first-button"><a href="login_page.html">Log In</a></div></li>';
                 }
@@ -127,9 +154,36 @@
   
   <!-- ***** List Job Start *****-->
   <section class="post-area section-gap" style="padding-top: 100px">
+        <div class="container">
+          <div class="row justify-content-center d-flex row-cols-1 row-cols-md-2">
+            <div class="row ">
+  <?php 
+    foreach($db->find() as $item){
+      echo '<div class="card mb-3" style="max-width: 1000px;">
+                <div class="row g-2">
+                  <div class="col-md-4">
+                    <img src="data:jpeg;base64,' .base64_encode(implode("",$item->Picture)). '" />
+                  </div>
+                 <div class="col-md-8">
+                   <div class="card-body">
+                      <h5 class="card-title"><a href="#">'.$item->JobTitle.'</a></h5>
+                      <h6>Salary: RM'.$item->MinimumSalary.' - '.$item->MaximumSalary.'</h6>
+                      <p class="card-text">'.$item->Description.'</p>
+                   </div>
+                 </div>
+                </div>';
+    }
+  ?>
+            </div>
+            </div>
+          </div>
+        </div>
+      </section>
+  <!--section class="post-area section-gap" style="padding-top: 100px">
 	  <div class="container">
 			<div class="row justify-content-center d-flex row-cols-1 row-cols-md-2">
         <div class="row ">
+
           <div class="card mb-3" style="max-width: 1000px;">
             <div class="row g-2">
               <div class="col-md-4">
@@ -144,10 +198,11 @@
               </div>
             </div>
           </div>
+
         </div>
       </div>
     </div>
-  </section>
+  </section-->
   <!-- ***** List Job End *****-->
 </body>
 </html>
