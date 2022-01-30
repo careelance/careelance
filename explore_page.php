@@ -7,13 +7,6 @@
     'mongodb+srv://group6:Group6@careelance.fyoln.mongodb.net/careelance?retryWrites=true&w=majority');
 
   $db = $client->careelance->job;
-  foreach($db->find() as $item){
-    $jobTitle = $item['JobTitle'];,
-    $minSalary = $item['MinimumSalary'];
-    $maxSalary = $item['MaximumSalary'];
-    $desc = $item['Description'];
-    $pict = $item['Picture'];
-  }
 ?>
 <!DOCTYPE html>
 <html lang="en">
