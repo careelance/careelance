@@ -167,7 +167,7 @@
           </div>
           <div class="col-md-8">
             <div class="card-body">
-              <h5 class="card-title"><a href="#">'.$item->JobTitle.'</a></h5>
+              <h5 class="card-title"><a href="#"><?php $item->JobTitle ?></a></h5>
               <h6><?php echo 'Salary: RM'.$item->MinimumSalary.' - '.$item->MaximumSalary?></h6>
               <p class="card-text"><?php $item->Description ?></p>
             </div>
