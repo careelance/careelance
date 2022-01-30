@@ -8,11 +8,8 @@ $client = new MongoDB\Client(
 
 $db = $client->careelance->job;
 
-/*if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    echo $_POST["jobPost"];
-}*/
     //Retrieve details from Post Job form
-    $jobTitle = $_POST['jobtitle'];
+    $jobType = $_POST['jobtype'];
     $minSalary = $_POST['minsalary'];
     $maxSalary = $_POST['maxsalary'];
     $eduLevel = $_POST['edulevel'];
@@ -23,14 +20,12 @@ $db = $client->careelance->job;
 
     if(isset($_FILES['picture'])){
         $pict = $_FILES['picture'];
-        $document = array(new MongoDB\BSON\Binary(file_get_contents($pict["tmp_name"]), MongoDB\BSON\Binary::TYPE_GENERIC));
-
-        //echo '<img src="data:jpeg;base64,' .base64_encode(implode("",$document)). '" />';
+        $document = new MongoDB\BSON\Binary(file_get_contents($pict["tmp_name"]), MongoDB\BSON\Binary::TYPE_GENERIC);
     }
 
     //Save to careelance->joblist
     $insertJob = $db->insertOne([
-        'JobTitle' => $jobTitle,
+        'JobType' => $jobType,
         'MinimumSalary' => $minSalary,
         'MaximumSalary' => $maxSalary,
         'EducationLevel' => $eduLevel,

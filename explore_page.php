@@ -1,5 +1,8 @@
 <?php
   session_start();
+  require_once('./dispJob.php');
+
+  $db = new dispJob;
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -22,7 +25,7 @@
 
   <!-- Additional CSS Files -->
   <link rel="stylesheet" href="assets/css/fontawesome.css">
-  <link rel="stylesheet" href="assets/css/templatemo-digimedia-v3.css">
+  <link rel="stylesheet" href="assets/css/careelance.css">
   <link rel="stylesheet" href="assets/css/animated.css">
   <link rel="stylesheet" href="assets/css/owl.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css">
@@ -151,60 +154,29 @@
           <div class="row justify-content-center d-flex row-cols-1 row-cols-md-2">
             <div class="row ">
   <?php 
-
-require_once __DIR__ . '/vendor/autoload.php';
-
-$client = new MongoDB\Client(
-  'mongodb+srv://group6:Group6@careelance.fyoln.mongodb.net/careelance?retryWrites=true&w=majority');
-
-$db = $client->careelance->job;
-    foreach($db->find() as $item){
-      echo '<img src="data:jpeg;base64,' .base64_encode(implode("",$item['Picture'])). '" />';
+    foreach($db->fetchData() as $item){
       ?>
       <div class="card mb-3" style="max-width: 1000px;">
         <div class="row g-2">
           <div class="col-md-4">
-            <?php echo '<img src="data:jpeg;base64,' .base64_encode(implode("",$item['Picture'])). '" />';?>
+            <?php
+			echo '<img src="data:jpeg;base64,' .base64_encode($item->Picture). '" />';?>
           </div>
           <div class="col-md-8">
             <div class="card-body">
-              <h5 class="card-title"><a href="#"><?php $item['JobTitle'] ?></a></h5>
-              <h6><?php echo 'Salary: RM'.$item['MinimumSalary'].' - '.$item['MaximumSalary']?></h6>
-              <p class="card-text"><?php $item['Description'] ?></p>
+              <h5 class="card-title"><a href="#"><?php echo $item->JobType ?></a></h5>
+              <h6><?php echo 'Salary: RM'.$item->MinimumSalary.' - '.$item->MaximumSalary?></h6>
+              <p class="card-text"><?php echo $item->Description ?></p>
             </div>
           </div>
         </div>
     </div>
-<?php    }?>
+  <?php    }?>
             </div>
             </div>
           </div>
         </div>
       </section>
-  <!--section class="post-area section-gap" style="padding-top: 100px">
-	  <div class="container">
-			<div class="row justify-content-center d-flex row-cols-1 row-cols-md-2">
-        <div class="row ">
-
-          <div class="card mb-3" style="max-width: 1000px;">
-            <div class="row g-2">
-              <div class="col-md-4">
-                <img src="c_mini.png" class="rounded float-start" alt="...">
-              </div>
-              <div class="col-md-8">
-                <div class="card-body">
-                  <h5 class="card-title"><a href="#">UI/UX Designer</a></h5>
-                  <h6>Company Name</h6>
-                  <p class="card-text">We are searching for an eligible freelancer to work on our project.</p>
-                </div>
-              </div>
-            </div>
-          </div>
-
-        </div>
-      </div>
-    </div>
-  </section-->
   <!-- ***** List Job End *****-->
 </body>
 </html>

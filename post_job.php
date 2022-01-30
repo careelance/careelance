@@ -22,7 +22,7 @@
 
   <!-- Additional CSS Files -->
   <link rel="stylesheet" href="assets/css/fontawesome.css">
-  <link rel="stylesheet" href="assets/css/templatemo-digimedia-v3.css">
+  <link rel="stylesheet" href="assets/css/careelance.css">
   <link rel="stylesheet" href="assets/css/animated.css">
   <link rel="stylesheet" href="assets/css/owl.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css">
@@ -104,8 +104,17 @@
                       <div class="row">
                         <div class="col-md-12">
                           <div class="form-group app-label mt-2">
-                            <label for="company-name" class="text-muted">Job Title</label>
-                            <input name="jobtitle" type="text" class="form-control resume" placeholder="">
+                            <label for="company-name" class="text-muted">Job Type</label>
+                              <div class="form-button">
+                                <select class="nice-select" name="jobtype">
+                                  <option data-display="type">Type</option>
+                                  <option value="UI/UX Designer">UI/UX Designer</option>
+                                  <option value="Frontend Developer">Frontend Developer</option>
+                                  <option value="Backend Developer">Backend Developer</option>
+                                  <option value="Software Engineering">Software Engineering</option>
+													        <option value="Education">Education</option>
+                                </select>
+                              </div>
                           </div>
                         </div>
                       </div>
